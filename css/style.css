@@ -1,0 +1,86 @@
+:root{ /* Custom Properties */
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+
+    --primario: #784D3C;
+    --blanco: #ffffff;
+    --negro: #000000;
+}
+
+html{
+    box-sizing: border-box; /* Para que el padding, border, etc. No afecte el ancho de nuestros elementos */
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem; /* 16 pixeles */
+    line-height: 2; /* Es el interlineado que va a tener */
+}
+
+/** Globales **/
+.contenedor{
+    max-width: 120rem; /* El maximo que puede alcanzar es 1200 pixeles */
+    width: 90%; /* el 90% de 12000 pixeles */
+    margin: 0 auto; /* Para centrar el contenido horizontalmente */
+}
+
+a{
+    text-decoration: none; /* Los enlaces no van a tener interlineado */
+}
+
+h1,h2,h3,h4{
+    font-family: var(--fuenteHeading);
+}
+
+h1{
+    font-size: 4.8rem; /* Son 48 pixeles */
+}
+
+h2{
+    font-size: 4rem; /* Son 40 pixeles */
+}
+
+h3{
+    font-size: 3.2rem; /* Son 32 pixeles */
+}
+
+h4{
+    font-size: 2.8rem; /* Son 28 pixeles */
+}
+
+img{
+    max-width: 100%; /* Las imagenes van a tener un 100% de maximo */
+}
+
+/** Utilidades **/
+.no-margin{
+    margin: 0;
+}
+
+.no-padding{
+    padding: 0;
+}
+
+.centrar-texto{
+    text-align: center;
+}
+
+/** Header **/
+.header{
+    background-image: url(../img/banner.jpg);
+    height: 60rem; /* Son 600 pixeles */
+    background-size: cover; /* Para que cubra todo el espacio */
+    background-repeat: no-repeat; /* Para que no se repita la imagen */
+    background-position: center center; /* Se tiene que centrar verticalmente y horizontalmente */
+}
+
+.header__texto{
+    text-align: center; /* El texto va a estar centrado horizontalmente */
+    color: var(--blanco); /* El color de la fuente de texto */
+    margin-top: 5rem;
+}
