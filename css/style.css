@@ -3,6 +3,7 @@
     --fuenteParrafos: 'Open Sans', sans-serif;
 
     --primario: #784D3C;
+    --gris: #e1e1e1;
     --blanco: #ffffff;
     --negro: #000000;
 }
@@ -125,3 +126,43 @@ img{
     color: var(--blanco);
 }
 
+/* NUESTRO BLOG */
+@media (min-width: 768px) {
+    .contenido-principal{
+        display: grid;
+        grid-template-columns: 2fr 1fr; /* La ´primera parte toma 2/3 y la tercera parte toma 1/3 */
+        column-gap: 4rem; /* 40 pixeles */
+    }
+}
+
+.entrada{
+    border-bottom: 1px solid var(--gris); /* Le creamos un borde en la parte inferior */
+    margin-bottom: 2rem; /* Agregamos margen en la parte inferior */
+}
+
+.entrada:last-of-type{ /* No incluimos el ultimo */
+    border: none;
+    margin-bottom: 0;
+}
+
+.boton{
+    display: block;
+    font-family: var(--fuenteHeading);
+    color: var(--blanco);
+    text-align: center; /* Centra el texto horizontalmente */
+    padding: 1rem 3rem; /* Abajo y arriba, derecha e izquierda */ 
+    font-size: 1.8rem; /* 18 pixeles */
+    text-transform: uppercase; /* Las transforma a mayusculas */
+    font-weight: 700; /* Hace que se conviertan en negritas */
+    margin-bottom: 2rem; /* Le agrega margin inferior */
+}
+
+@media (min-width: 768px) {
+    .boton{
+        display: inline-block; /* Toma el espacio que requiere pero en caso de que quiera un margin o un width, si lo va a respetar */
+    }
+}
+
+.boton--primario{
+    background-color: var(--negro);
+}
