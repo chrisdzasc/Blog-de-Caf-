@@ -27,6 +27,7 @@ body{
 .contenedor{
     max-width: 120rem; /* El maximo que puede alcanzar es 1200 pixeles */
     width: 90%; /* el 90% de 12000 pixeles */
+    width: min(90%, 120rem); /* Aplica el valor de esos 2 que sea menor */
     margin: 0 auto; /* Para centrar el contenido horizontalmente */
 }
 
@@ -36,6 +37,7 @@ a{
 
 h1,h2,h3,h4{
     font-family: var(--fuenteHeading);
+    line-height: 1.2;
 }
 
 h1{
@@ -90,6 +92,10 @@ img{
     .header__texto{
         margin-top: 15rem; /* Margen de la parte superior */
     }
+}
+
+.barra{
+    padding-top: 4rem;
 }
 
 @media (min-width: 768px) {
@@ -165,4 +171,44 @@ img{
 
 .boton--primario{
     background-color: var(--negro);
+}
+
+/* SIDEBAR */
+.boton--secundario{
+    background-color: var(--primario);
+}
+
+.cursos{
+    list-style: none; /* Elegir el tipo de viñetas */
+}
+
+.widget-cursos{
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 2rem;
+}
+
+.widget-cursos:last-of-type{
+    border: none;
+    margin-bottom: 0;
+}
+
+.widget-curso__label{
+    font-family: var(--fuenteHeading);
+    font-weight: 700;
+}
+
+.widget-curso__info{
+    font-weight: 400;
+}
+
+.widget-curso__label,
+.widget-curso__info{
+    font-size: 2rem;
+}
+
+/* FOOTER */
+.footer{
+    background-color: var(--negro);
+    padding-bottom: 3rem;
+    margin-top: 4rem;
 }
