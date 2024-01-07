@@ -84,3 +84,44 @@ img{
     color: var(--blanco); /* El color de la fuente de texto */
     margin-top: 5rem;
 }
+
+@media (min-width: 768px) {
+    .header__texto{
+        margin-top: 15rem; /* Margen de la parte superior */
+    }
+}
+
+@media (min-width: 768px) {
+    .barra{
+        display: flex;
+        justify-content: space-between; /* Alinear horizontalmente */
+        align-items: center; /* Alinear verticalmente */
+    }
+}
+
+.logo{
+    color: var(--blanco);
+}
+
+.logo__nombre{
+    font-weight: normal; /* 400 o normal es lo mismo */
+}
+
+.logo__bold{
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .navegacion{
+        display: flex;
+        gap: 2rem; /* Crea una separacion entre los enlaces */
+    }
+}
+
+.navegacion__enlace{
+    display: block; /* Los elementos estarán debajo del otro */
+    text-align: center; /* Estén centrados horizontalmente */
+    font-size: 1.8rem; /* 18 pixeles */
+    color: var(--blanco);
+}
+
