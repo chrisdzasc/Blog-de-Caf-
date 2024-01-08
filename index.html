@@ -3,11 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página web de blog de café">
     <title>BlogDeCafé</title>
-    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- Prefetch -->
+    <link rel="prefetch" href="nosotros.html" as="document">
+
+    <link rel="icon" type="image/png" href="img/logoCafe.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Preload -->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -39,36 +50,45 @@
 
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog1.jpg" alt="imagen blog">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog1.webp" type="image/webp">
+                        <img loading="lazy" src="img/blog1.jpg" alt="imagen blog">
+                    </picture>
                 </div>
 
                 <div class="entrada__contenido">
                     <h4 class="no-margin">Tipos de Grano de Café</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium ex temporibus dolor commodi, optio asperiores numquam eum ipsa molestias autem maiores consectetur illo dolore iste eius atque placeat doloribus officia.</p>
+                    <p>Descubre la diversidad sensorial del café en nuestro curso. Exploraremos los distintos tipos de granos, desde el suave Arábica hasta el audaz Robusta. Aprende sobre sus orígenes, procesos y perfiles de sabor. ¡Embárcate en un viaje de conocimiento cafetero con nosotros!</p>
                     <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
                 </div>
             </article>
 
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog2.jpg" alt="imagen blog">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog2.webp" type="image/webp">
+                        <img loading="lazy" src="img/blog2.jpg" alt="imagen blog">
+                    </picture>
                 </div>
 
                 <div class="entrada__contenido">
                     <h4 class="no-margin">3 Deliciosas Recetas de café</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium ex temporibus dolor commodi, optio asperiores numquam eum ipsa molestias autem maiores consectetur illo dolore iste eius atque placeat doloribus officia.</p>
+                    <p>Explora el arte de preparar café con nuestro curso. Descubre 3 recetas exclusivas que transformarán tu rutina cafetera. Desde expresos innovadores hasta lattes irresistibles, aprende a crear magia en cada sorbo. ¡Sorprende tu paladar y eleva tu experiencia cafetera con nosotros!</p>
                     <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
                 </div>
             </article>
 
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog3.jpg" alt="imagen blog">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog3.webp" type="image/webp">
+                        <img loading="lazy" src="img/blog3.jpg" alt="imagen blog">
+                    </picture>
                 </div>
 
                 <div class="entrada__contenido">
                     <h4 class="no-margin">Beneficios del Café</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium ex temporibus dolor commodi, optio asperiores numquam eum ipsa molestias autem maiores consectetur illo dolore iste eius atque placeat doloribus officia.</p>
+                    <p>Sumérgete en el mundo de los beneficios para la salud con nuestro curso dedicado al café. Exploraremos las últimas investigaciones y revelaremos cómo tu taza diaria de café puede ofrecer más que solo un impulso de energía. Desde antioxidantes hasta mejoras cognitivas, descubre cómo el café puede ser una adición saludable a tu estilo de vida. ¡Únete a nosotros para desentrañar los secretos detrás de los beneficios del café!</p>
                     <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
                 </div>
             </article>
@@ -87,7 +107,7 @@
                     <p class="widget-curso__label">Cupo:
                         <span class="widget-curso__info">20</span>
                     </p>
-                    <a href="entrada.html" class="boton boton--secundario">Más Información</a>
+                    <a href="entrada.html" class="boton boton--secundario">Más Información sobre nuestros cursos</a>
                 </li>
 
                 <li class="widget-cursos">
@@ -98,7 +118,7 @@
                     <p class="widget-curso__label">Cupo:
                         <span class="widget-curso__info">20</span>
                     </p>
-                    <a href="entrada.html" class="boton boton--secundario">Más Información</a>
+                    <a href="entrada.html" class="boton boton--secundario">Más Información sobre nuestros cursos</a>
                 </li>
             </ul>
         </aside>
@@ -120,5 +140,6 @@
         </div>
     </footer>
     
+    <script src="js/modernizr.js"></script>
 </body>
 </html>

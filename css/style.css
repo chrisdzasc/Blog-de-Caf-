@@ -26,7 +26,7 @@ body{
 /** Globales **/
 .contenedor{
     max-width: 120rem; /* El maximo que puede alcanzar es 1200 pixeles */
-    width: 90%; /* el 90% de 12000 pixeles */
+    width: 90%; /* el 90% de 1200 pixeles */
     width: min(90%, 120rem); /* Aplica el valor de esos 2 que sea menor */
     margin: 0 auto; /* Para centrar el contenido horizontalmente */
 }
@@ -74,6 +74,14 @@ img{
 }
 
 /** Header **/
+.webp .header{
+    background-image: url(../img/banner.webp);
+}
+
+.no-webp .header{
+    background-image: url(../img/banner.jpg);
+}
+
 .header{
     background-image: url(../img/banner.jpg);
     height: 60rem; /* Son 600 pixeles */
@@ -161,6 +169,11 @@ img{
     text-transform: uppercase; /* Las transforma a mayusculas */
     font-weight: 700; /* Hace que se conviertan en negritas */
     margin-bottom: 2rem; /* Le agrega margin inferior */
+    border: none;
+}
+
+.boton:hover{
+    cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -192,17 +205,21 @@ img{
     margin-bottom: 0;
 }
 
-.widget-curso__label{
+.widget-curso__label,
+.curso__label{
     font-family: var(--fuenteHeading);
     font-weight: 700;
 }
 
-.widget-curso__info{
+.widget-curso__info,
+.curso__info{
     font-weight: 400;
 }
 
 .widget-curso__label,
-.widget-curso__info{
+.widget-curso__info,
+.curso__label,
+.curso__info{
     font-size: 2rem;
 }
 
@@ -211,4 +228,67 @@ img{
     background-color: var(--negro);
     padding-bottom: 3rem;
     margin-top: 4rem;
+}
+
+/** SOBRE NOSOTROS **/
+@media (min-width: 768px) {
+    .sobre-nosotros{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+
+    }
+}
+
+/** CURSOS **/
+.curso{
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--gris);
+}
+
+@media (min-width: 768px) {
+    .curso{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+
+.curso:last-of-type{
+    border: none;
+}
+
+/** CONTACTO **/
+.contacto-bg{
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.formulario{
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+}
+
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+.campo__label{
+    flex: 0 0 9rem;
+    text-align: right;
+}
+
+.campo__field{
+    flex: 1;
+    border: 1px solid var(--gris);
+}
+
+.campo__field--textarea{
+    height: 20rem;
 }
